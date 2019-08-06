@@ -101,5 +101,5 @@ func checkArguments() (printUsage bool, err error) {
 func printUsage() {
 	fmt.Print("AstroPay Migration Tool\n\n")
 	flag.Usage()
-	fmt.Print("\nexample: db-migrations -db=apc -env=test -dbuser=myuser -dbpass=Passw0rd -command=up\n")
+	fmt.Print("\nexample: migrate -db=apc -env=test -dbuser=myuser -dbpass=Passw0rd -command=up\n")
 }
