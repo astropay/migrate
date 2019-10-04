@@ -2,9 +2,9 @@ package main
 
 // Database server addresses
 const (
-	DBHostProduction = "master.apc.db.astropay:3306"
-	DBHostTesting    = "master.apc.db.astropay.test:3306"
-	DBHostStaging    = "master.apc.db.astropay.stg:3306"
+	DBHostProduction = "master.apc.db.prod.astro:3306"
+	DBHostTesting    = "apc.db.tst.astro:3306"
+	DBHostStaging    = "master.apc.db.stg.astro:3306"
 	DBHostDev        = "127.0.0.1:3306"
 )
 
