@@ -10,6 +10,9 @@ Usage examples:
 - run migration for `test` schema in a specific directory
 `migrate -db=apc -env=dev -dbuser=myuser -dbpass=Passw0rd -command=up -dir=/opt/dbscripts`
 
+- you can also indicate the db server directly using the parameter `dbhost`
+`migrate -dbhost=127.0.0.1:3306 -db=apc -dbuser=myuser -dbpass=Passw0rd -command=up -dir=/opt/dbscripts`
+
 To install the binary:
 
 - You can get the latest relased binary from [Releases page](https://github.com/astropay/migrate/releases)
