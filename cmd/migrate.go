@@ -12,7 +12,7 @@ import (
 )
 
 // main migration logic
-func runMigrate(db, env, dbUser, dbPass, command, migrationsDir string) (err error) {
+func runMigrate(db, host, env, dbUser, dbPass, command, migrationsDir string) (err error) {
 
 	currentPath, _ := os.Getwd()
 	migrationsPath := ""
@@ -29,8 +29,12 @@ func runMigrate(db, env, dbUser, dbPass, command, migrationsDir string) (err err
 		return fmt.Errorf("schema directory '%s' does not exist", schemaPath)
 	}
 
+	// get pre-defined host or use the one indicated by the user
+	if host == "" {
+		host = getHost(env)
+	}
+
 	// build conn string
-	host := getHost(env)
 	connStr := fmt.Sprintf(ConnectionString, dbUser, dbPass, host, db)
 
 	// open db connection
